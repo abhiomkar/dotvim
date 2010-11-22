@@ -66,16 +66,35 @@ set autoindent
 set smartindent
 set history=1000
 
-au BufNewFile,BufRead *.tt
-    \ set syntax=html
+au BufNewFile,BufRead *.tt set syntax=html
+if has("autocmd")
+  " *.tt & *.conf files
+  augroup module
 
-au BufNewFile,BufRead *.conf
-	\ | shiftwidth=2
-	\ | tabstop=2 
-    \ | set syntax=conf
+    autocmd BufRead,BufNewFile *.tt set filetype=html
+    autocmd BufRead,BufNewFile *.tt set syntax=html
+
+    autocmd BufRead,BufNewFile *.conf set expandtab
+    autocmd BufRead,BufNewFile *.conf set tabstop=2
+    autocmd BufRead,BufNewFile *.conf set shiftwidth=2
+    autocmd BufRead,BufNewFile *.conf set autoindent
+    autocmd BufRead,BufNewFile *.conf set smartindent
+    autocmd BufRead,BufNewFile *.conf set syntax=conf
+
+  augroup END
+endif
 
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 inoremap jj <ESC>
+
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
 
