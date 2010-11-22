@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='scp://aomkar@flex.dev.velocitude.mobi:22/'
+let g:netrw_dirhist_2='sftp://aomkar@flex.dev.velocitude.mobi:22/'
+let g:netrw_dirhist_3='scp://aomkar@flex.dev.velocitude.mobi:22/'
+let g:netrw_dirhist_4='scp://aomkar@flex.dev.velocitude.mobi:22//home/aomkar/'
+let g:netrw_dirhist_5='scp://aomkar@flex.dev.velocitude.mobi:22//home/aomkar/mobile/Mobile/root/m/www.netapp.com/'
