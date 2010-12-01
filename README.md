@@ -3,8 +3,8 @@ USAGE:
     cd ~
     git clone http://github.com/abhiomkar/dotvim.git ~/.vim
 
-    ln -s ~/.vim/vimrc ~/.vimrc
-    ln -s ~/.vim/gvimrc ~/.gvimrc
+    ln -s ~/.vim/.vimrc ~/.vimrc
+    ln -s ~/.vim/.gvimrc ~/.gvimrc
 
 (optional)
     cd ~/.vim
