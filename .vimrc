@@ -97,4 +97,4 @@ endif
 let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
-
+set guifont=Menlo\ Regular:h12 
