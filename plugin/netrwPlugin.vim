@@ -18,7 +18,7 @@
 " =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 " Load Once: {{{1
 if &cp || exists("g:loaded_netrwPlugin")
- finish
+    finish
 endif
 let g:loaded_netrwPlugin = "v136"
 if v:version < 702
