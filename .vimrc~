@@ -46,10 +46,10 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-" relativenumber and undofile are only compatable with new Vim 7.3
 if has("relativenumber")
     set relativenumber
 endif
+
 if has("undofile")
     set undofile
 endif
