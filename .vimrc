@@ -56,7 +56,7 @@ filetype plugin indent on
 set modelines=0
 
 set linespace=0
-colorscheme torte
+colorscheme slate
 set guifont=Monaco:h9
 set shiftwidth=4
 set tabstop=4
@@ -76,6 +76,7 @@ if has("autocmd")
 
     autocmd BufRead,BufNewFile *.conf set expandtab
     autocmd BufRead,BufNewFile *.conf set tabstop=2
+    autocmd BufRead,BufNewFile *.conf set softtabstop=2
     autocmd BufRead,BufNewFile *.conf set shiftwidth=2
     autocmd BufRead,BufNewFile *.conf set autoindent
     autocmd BufRead,BufNewFile *.conf set smartindent
