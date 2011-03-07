@@ -7,7 +7,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 set diffexpr=MyDiff()
-function MyDiff()
+function! MyDiff()
   let opt = '-a --binary '
   if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
   if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
@@ -104,3 +104,6 @@ let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 set guifont=Menlo\ Regular:h12 
+
+" F Keys Mapping
+nnoremap <silent> <leader>e  :NERDTreeToggle<CR>
