@@ -1,5 +1,11 @@
+:Ack	ack.txt	/*:Ack*
+:AckAdd	ack.txt	/*:AckAdd*
+:AckFile	ack.txt	/*:AckFile*
+:AckFromSearch	ack.txt	/*:AckFromSearch*
 :Explore	pi_netrw.txt	/*:Explore*
 :Hexplore	pi_netrw.txt	/*:Hexplore*
+:LAck	ack.txt	/*:LAck*
+:LAckAdd	ack.txt	/*:LAckAdd*
 :NetrwClean	pi_netrw.txt	/*:NetrwClean*
 :Nexplore	pi_netrw.txt	/*:Nexplore*
 :Pexplore	pi_netrw.txt	/*:Pexplore*
@@ -10,6 +16,9 @@
 Nread	pi_netrw.txt	/*Nread*
 Nsource	pi_netrw.txt	/*Nsource*
 Nwrite	pi_netrw.txt	/*Nwrite*
+ack	ack.txt	/*ack*
+ack-author	ack.txt	/*ack-author*
+ack.txt	ack.txt	/*ack.txt*
 b:netrw_lastfile	pi_netrw.txt	/*b:netrw_lastfile*
 dav	pi_netrw.txt	/*dav*
 davs	pi_netrw.txt	/*davs*
