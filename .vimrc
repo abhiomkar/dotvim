@@ -32,7 +32,6 @@ function! MyDiff()
 endfunction
 
 syn on 
-filetype off
 set encoding=utf-8
 set scrolloff=3
 set autoindent
@@ -46,13 +45,6 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-" relativenumber and undofile are only compatable with new Vim 7.3
-if has("relativenumber")
-    set relativenumber
-endif
-if has("undofile")
-    set undofile
-endif
 
 let g:netrw_cygwin= 0
 
@@ -107,3 +99,11 @@ set guifont=Menlo\ Regular:h12
 
 " F Keys Mapping
 nnoremap <silent> <leader>e  :NERDTreeToggle<CR>
+
+if version >= 730
+    set relativenumber
+    set undofile
+    set undodir=~/.vim/tmp/undo//
+endif
+
+set ofu=syntaxcomplete#Complete
