@@ -53,7 +53,8 @@ filetype plugin indent on
 set modelines=0
 
 set linespace=0
-colorscheme slate
+" colorscheme slate
+colorscheme solarized
 set guifont=Monaco:h9
 set shiftwidth=4
 set tabstop=4
@@ -100,8 +101,10 @@ set guifont=Menlo\ Regular:h12
 " F Keys Mapping
 nnoremap <silent> <leader>e  :NERDTreeToggle<CR>
 
-if version >= 730
+if has("relativenumber")
     set relativenumber
+endif
+if has("undofile")
     set undofile
     set undodir=~/.vim/tmp/undo//
 endif
