@@ -54,6 +54,7 @@ set modelines=0
 
 set linespace=0
 " colorscheme slate
+set background=dark
 colorscheme solarized
 set guifont=Monaco:h9
 set shiftwidth=4
@@ -72,13 +73,16 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.tt set filetype=html
     autocmd BufRead,BufNewFile *.tt set syntax=html
 
+    autocmd BufRead,BufNewFile *.ftl set filetype=ftl
+    autocmd BufRead,BufNewFile *.ftl set syntax=ftl
+
     autocmd BufRead,BufNewFile *.conf set expandtab
     autocmd BufRead,BufNewFile *.conf set tabstop=2
     autocmd BufRead,BufNewFile *.conf set softtabstop=2
     autocmd BufRead,BufNewFile *.conf set shiftwidth=2
     autocmd BufRead,BufNewFile *.conf set autoindent
     autocmd BufRead,BufNewFile *.conf set smartindent
-    autocmd BufRead,BufNewFile *.conf set syntax=conf
+    autocmd BufRead,BufNewFile *.conf set syntax=clojure
 
   augroup END
 endif
@@ -101,12 +105,19 @@ set guifont=Menlo\ Regular:h12
 " F Keys Mapping
 nnoremap <silent> <leader>e  :NERDTreeToggle<CR>
 
-if has("relativenumber")
+if version >= 703
     set relativenumber
-endif
-if has("undofile")
     set undofile
     set undodir=~/.vim/tmp/undo//
 endif
 
 set ofu=syntaxcomplete#Complete
+
+" Settings for VimClojure
+let vimclojure#HighlightBuiltins=1
+let vimclojure#ParenRainbow=1
+
+" Disable Cursor Blinking
+set guicursor+=a:blinkon0
+
+let g:SuperTabDefaultCompletionType = "context"
